@@ -1,0 +1,611 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  top: 0;
+  height: 100px;
+  background-color: white;
+  position: sticky;
+  z-index: 9999;
+  background-color: rgba(239, 235, 247, 0.712);
+}
+.droplogo {
+  display: none;
+}
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: -6px;
+  margin: 0px 0px 0px -40px;
+}
+.header-container > nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container > nav .links > a {
+  text-decoration: none;
+  font-family: "Poppins" sans-serif;
+  color: black;
+  letter-spacing: 2px;
+  margin: 0px 10px;
+}
+.links {
+  margin-left: 80px;
+}
+.links > a:hover {
+  color: burlywood;
+  transition: 1s ease;
+  transform: translateY(-3px);
+}
+.signAndLog > button:nth-of-type(1) {
+  width: 120px;
+  background-color: rgb(20, 17, 65);
+  font-family: "Poppins", sans-serif;
+  height: 50px;
+  font-weight: 600;
+  border: 1px solid rgb(148, 133, 50);
+  color: white;
+  border-radius: 30px;
+}
+.signAndLog > button:hover {
+  transition: 2s ease;
+  box-shadow: 0px 0px 10px 0px gold;
+  transform: translateY(-3px);
+}
+.signAndLog > a {
+  cursor: pointer;
+  margin: 0px 10px;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  height: 40px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+.hamburger span {
+  width: 25px;
+  height: 2.5px;
+  background: #6b1fa0;
+  display: block;
+  transition: 0.3s;
+}
+section:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+}
+section:nth-of-type(1) > div:nth-of-type(1) > h1 {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(5, 2, 44);
+  font-weight: 600;
+  margin-top: 50px;
+}
+section:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  color: gold;
+  font-weight: 400;
+}
+section:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2) {
+  font-size: 15px;
+  color: rgb(5, 2, 44);
+}
+section:nth-of-type(1) > div:nth-of-type(2) {
+  width: 17%;
+  text-align: center;
+  height: 100px;
+  margin: 50px 0px 0px 50px;
+  border: 1px solid rgb(248, 219, 55);
+  border-radius: 10px;
+}
+section:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+  background-color: rgb(5, 2, 44);
+  text-align: center;
+  border-radius: 10px 10px 0px 0px;
+}
+section:nth-of-type(1)
+  > div:nth-of-type(2)
+  > div:nth-of-type(1)
+  > p:nth-of-type(1) {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+section:nth-of-type(1)
+  > div:nth-of-type(2)
+  > div:nth-of-type(1)
+  > p:nth-of-type(2) {
+  color: rgb(6, 0, 82);
+}
+section:nth-of-type(2) {
+  border: 1px solid rgba(2, 1, 66, 0.527);
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+  margin: 50px auto;
+}
+.flightinfo {
+  width: 50%;
+}
+.flightinfo > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.flightinfo > div {
+  width: 100%;
+}
+hr {
+  width: 100%;
+  text-decoration: dashed;
+}
+.icon {
+  background-color: rgb(5, 2, 44);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 10px;
+}
+.icon i {
+  color: white;
+}
+b {
+  color: gold;
+  margin: 0px 10px;
+}
+section:nth-of-type(3)>button:nth-of-type(1){
+  background-color: rgb(5, 2, 44);
+  width: 200px;
+  border: 1px solid gold;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  height: 45px;
+  color: goldenrod;
+  margin: 20px 0px 0px 120px;
+}
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* =====================================
+   TABLETS / SMALL LAPTOPS
+===================================== */
+
+@media (max-width: 1024px) {
+  .header-container {
+    margin: 0;
+    padding: 0 25px;
+    justify-content: space-between;
+  }
+
+  .header-container > nav {
+    width: 75%;
+  }
+
+  .links {
+    margin-left: 0;
+  }
+
+  .header-container > nav .links > a {
+    margin: 0 5px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .signAndLog > button:nth-of-type(1) {
+    width: 100px;
+    height: 45px;
+  }
+
+  .signAndLog > a {
+    font-size: 15px;
+  }
+
+  /* FIRST SECTION */
+
+  section:nth-of-type(1) {
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) {
+    width: 100%;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) > h1 {
+    font-size: 28px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2) {
+    font-size: 14px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(2) {
+    width: 220px;
+    margin: 30px auto 0;
+  }
+
+  /* BOOKING DETAILS */
+
+  section:nth-of-type(2) {
+    width: 90%;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .flightinfo {
+    width: 100%;
+  }
+}
+
+/* =====================================
+   TABLETS
+===================================== */
+
+@media (max-width: 768px) {
+  header {
+    height: 80px;
+  }
+
+  .header-container {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .weblogo {
+    height: 70px;
+  }
+
+  /* HAMBURGER */
+
+  .hamburger {
+    display: flex;
+    z-index: 10001;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 80px);
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 25px 20px;
+
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.1);
+
+    transition: right 0.35s ease;
+
+    overflow-y: auto;
+  }
+
+  /* OPEN MENU */
+
+  #menu-toggle:checked ~ .nav-menu {
+    right: 0;
+  }
+
+  .droplogo {
+    display: block;
+    height: 70px;
+    margin-bottom: 30px;
+  }
+
+  .nav-menu .links {
+    width: 100%;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-container > nav .links > a {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .signAndLog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  
+
+  /* CONFIRMATION HEADER */
+
+  section:nth-of-type(1) {
+    padding: 25px 15px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) > h1 {
+    font-size: 24px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+    font-size: 20px;
+  }
+
+  /* BOOKING REFERENCE */
+
+  section:nth-of-type(1) > div:nth-of-type(2) {
+    width: 230px;
+    margin: 25px auto 0;
+  }
+
+  /* BOOKING DETAILS */
+
+  section:nth-of-type(2) {
+    width: 92%;
+    padding: 20px;
+    margin: 35px auto;
+  }
+
+  .flightinfo {
+    width: 100%;
+  }
+
+  .flightinfo > div {
+    gap: 8px;
+  }
+
+  .flightinfo p {
+    font-size: 14px;
+  }
+}
+
+/* =====================================
+   MOBILE PHONES
+===================================== */
+
+@media (max-width: 480px) {
+  header {
+    height: 75px;
+  }
+
+  .header-container {
+    height: 75px;
+    padding: 0 15px;
+  }
+
+  .weblogo {
+    height: 60px;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+  }
+
+  .nav-menu {
+    top: 75px;
+    width: 100%;
+    height: calc(100vh - 75px);
+  }
+
+  .droplogo {
+    height: 65px;
+  }
+
+  /* FIRST SECTION */
+
+  section:nth-of-type(1) {
+    padding: 25px 12px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) > h1 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(1) {
+    font-size: 17px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2) {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  /* BOOKING REFERENCE */
+
+  section:nth-of-type(1) > div:nth-of-type(2) {
+    width: 200px;
+    height: 90px;
+    margin-top: 20px;
+  }
+
+  section:nth-of-type(1)
+    > div:nth-of-type(2)
+    > div:nth-of-type(1)
+    > p:nth-of-type(1) {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  /* BOOKING CARD */
+
+  section:nth-of-type(2) {
+    width: 94%;
+    padding: 15px;
+    margin: 25px auto;
+    border-radius: 8px;
+  }
+  section:nth-of-type(2)>div:nth-of-type(2) {
+    display: none;
+
+  }
+  .flightinfo > h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .flightinfo > div {
+    align-items: flex-start;
+    gap: 5px;
+    margin: 12px 0;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin: 5px;
+    flex-shrink: 0;
+  }
+
+  .flightinfo p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .flightinfo b {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  hr {
+    margin: 5px 0;
+  }
+
+  /* PRINT BUTTON */
+
+  .print-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 40px;
+  }
+
+  #printBooking {
+    width: 90%;
+    height: 48px;
+    font-size: 14px;
+  }
+  section:nth-of-type(3)>button:nth-of-type(1){
+    margin: 0;
+  }
+}
+
+/* =====================================
+   VERY SMALL PHONES
+===================================== */
+
+@media (max-width: 360px) {
+  .weblogo {
+    height: 55px;
+  }
+
+  .header-container {
+    padding: 0 10px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) > h1 {
+    font-size: 18px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(1) > p:nth-of-type(2) {
+    font-size: 11px;
+  }
+
+  section:nth-of-type(1) > div:nth-of-type(2) {
+    width: 180px;
+  }
+
+  section:nth-of-type(2) {
+    width: 96%;
+    padding: 12px;
+  }
+
+  .flightinfo > h2 {
+    font-size: 18px;
+  }
+
+  .flightinfo p {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .icon i {
+    font-size: 12px;
+  }
+}
+
+@media print {
+  header,
+  .print-container {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  section:nth-of-type(1) {
+    margin-top: 0;
+  }
+
+  section:nth-of-type(2) {
+    width: 90%;
+    border: 1px solid #333;
+    margin: 30px auto;
+  }
+
+  section:nth-of-type(2)>div:nth-of-type(2)>img{
+    display: none;
+  }
+
+  section:nth-of-type(3){
+    display: none;
+  }
+
+  .icon {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

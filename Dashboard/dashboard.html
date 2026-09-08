@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Customer DashBoard - Manhaj travel and tours</title>
+</head>
+    <link rel="shortcut icon" href="/homepage/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="./dashboard.css">
+<body>
+    <div class="whole-container">
+        <div class="side-bar">
+            <a href="/index.html"><img src="/homepage/images/imagelogo.png" alt="" height="100px"></a>
+            <div class="movements">
+                <div onclick="dashb()">
+                    <h3 class="dash"> 🏠Dashboard</h3>
+                </div>
+                <div  onclick="flightbook()" class="fly">
+                    <h3>✈️ Flight Bookings</h3>
+                </div>
+                <div onclick="payments()">
+                    <h3>💸 Payments</h3>
+                </div>
+                <div onclick="tourdeal()">
+                    <h3>🚶‍➡️Tour Deals</h3>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="image-profile"></div>
+                <div class="detail">
+                    <h3 class="profile-name"></h3>
+                    <small class="profile-email"></small>
+                </div>
+            </div>
+            <div class="log-out">
+                <h3 class="moveOut">log out➡️</h3>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="heading-message">
+                <div>
+                    <h3>Hi, <b class="see-name"></b>. Welcome to your Dashboard 👏</h3>
+                    <p><small>This is what is going on in your Dashboard.</small></p>
+                </div>
+                <div class="weather">
+                    <input type="search" name="weather" id="weather" placeholder="Search for the weather of your country">
+                    <button id="weatherBtn">Search</button>
+                    <button id="clearWeather" onclick="clearWeather()">Clear</button>
+                    <output id="weather-output">
+                        <p id="country-name"></p>
+                        <p id="temperature"></p>
+                    </output>
+                </div>
+            </div>
+            <div class="cards">
+                <div>
+                    <h4>Total Flight Bookings</h4>
+                    <h4 class="total">0</h4>
+                </div>
+                <div>
+                    <h4>Total Payments</h4>
+                    <h4>₦<b class="money-payments">0</b>.00</h4>
+                </div>
+                <div>
+                    <h4>Pending Bookings</h4>
+                    <h4 class="pending">0</h4>
+                </div>
+            </div>
+            <div class="all-flights">
+                <div>
+                    <h3>Flight Bookings</h3>
+                    <div>
+                        <a href="/index.html">Book Flight</a>
+                    </div>
+                </div>
+                <div>
+                    <p class="realDate"></p>
+                    <p class="realTime"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flight-bookings">
+            <h1>Flight Bookings</h1>
+            <div class="booked-flight">
+                <h3>Booked Flights: </h3><h3 class="insideBookOrigin"></h3>
+            </div>
+            <div class="available-flight">
+                <div>
+                    <p>No item matches your search</p>
+                </div>
+                <div>
+                    <a href="/bookedflight/flight.html" class="seeFlight"><button onclick="printFlight()" >Print Flight Itinerary</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div  class="pay">
+            <h1>Payments</h1>
+            <h3>You have not made any payment for any flight.</h3>
+            <div>
+                <h4>All Payments:</h4>
+            </div>
+        </div>
+        <div class="tour">
+            <h1>Tour Deals</h1>
+            <h3>Tour Deals are currently not available.</h3>
+            <div>
+                <h4>Explore our tour deals:</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./dashboard.js"></script>

@@ -1,0 +1,456 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family:"Poppins",sans-serif;
+}
+.whole-container{
+    background-image: url(/homepage/images/backgroundimage.png);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side-bar{
+    background-color: white;
+    border-radius: 0px 150px 0px 0px;
+    padding: 90px 0px 0px 30px;
+    width: 22%;
+    height: 100vh;
+    position: sticky;
+}
+.side-bar>a>img{
+    margin-bottom: 20px;
+}
+.movements>div{
+    height: 50px;
+    cursor:pointer;
+    padding: 5px 0px 0px 10px;
+    text-align: start;
+    width: 90%;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+.movements>div:hover{
+    transition: 1s ease;
+    color: white;
+    font-weight: 600;
+    font-family:"Poppins",sans-serif;
+    background-color: rgba(14, 2, 27, 0.89);
+    box-shadow: 0px 0px 10px 0px rgb(224, 196, 126);
+}
+.move{
+    transition: 1s ease;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    font-family:"Poppins",sans-serif;
+    background-color: rgba(14, 2, 27, 0.89);
+    box-shadow: 0px 0px 10px 0px rgb(224, 196, 126);
+}
+.movements>div>h3{
+    margin: 10px 0px;
+    font-size: 17px;
+    font-weight: 450;
+}
+.profile{
+    display: flex;
+    justify-content: space-between;
+}
+.image-profile{
+    margin-top: 50px;
+    width: 40px;
+    text-transform: uppercase;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgba(14, 2, 27, 0.89);
+}
+.detail{
+    margin: 45px 25px 0px -20px;
+}
+.heading-message{
+    margin: 50px 0px 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.heading-message>div:nth-of-type(2){
+    width: 30%;
+}
+.weather>button{
+    width: 40%;
+    margin-top: 10px;
+    height: 30px;
+    font-family: "Poppins", sans-serif;
+    background-color:#e4a909;
+    color: white;
+    border: 1px solid #d4c009;
+    border-radius: 5px;
+
+}
+.heading-message>div:nth-of-type(2)>input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    margin: 0px 20px 0px -20px;
+    font-family: "Poppins", sans-serif;
+    padding: 0px 10px;
+    border: 1px solid #d4c009;
+    box-shadow:  0px 0px 5px 0px #d3c75a;
+}
+.heading-message>div>h3{
+    font-weight: 500;
+    color: #252525;
+    font-size: 20px;
+}
+.cards{
+    margin: 50px 0px 0px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cards>div:nth-of-type(1){
+    background-color: #d1e8f5;
+    height: 150px;
+    width: 30%;
+    border-radius: 10px;
+}
+i{
+    color:rgb(240, 9, 9);
+    font-size:15px;
+}
+.cards>div:nth-of-type(2){
+    height: 150px;
+    width: 30%;
+    border-radius: 10px;
+    margin-left: -30px;
+    background-color: #cceaca;
+}
+.cards>div:nth-of-type(3){
+    height: 150px;
+    width: 30%;
+    border-radius: 10px;
+    margin: 0px 20px 0px -30px;
+    background-color: #f9dad6;
+}
+.cards>div:nth-of-type(1)>h4:nth-of-type(1){
+    padding-top: 20px;
+    margin: 20px 0px 10px 30px;
+    font-weight: 500;
+    color: #252525;
+    font-size: 20px;
+
+}
+.cards>div:nth-of-type(1)>h4:nth-of-type(2){
+    color: #252525;
+    margin-left: 30px;
+    font-size: 20px;
+
+}
+.cards>div:nth-of-type(2)>h4:nth-of-type(1){
+    padding-top: 20px;
+    margin: 20px 0px 10px 30px;
+    font-weight: 500;
+    color: #252525;
+    font-size: 20px;
+
+}
+.cards>div:nth-of-type(2)>h4:nth-of-type(2){
+    color: #252525;
+    margin-left: 30px;
+    font-size: 20px;
+
+}
+.cards>div:nth-of-type(3)>h4:nth-of-type(1){
+    padding-top: 20px;
+    margin: 20px 0px 10px 30px;
+    font-weight: 500;
+    color: #252525;
+    font-size: 20px;
+
+}
+.cards>div:nth-of-type(3)>h4:nth-of-type(2){
+    color: #252525;
+    margin-left: 30px;
+    font-size: 20px;
+
+}
+.whole-container>div:nth-of-type(2){
+    width: 78%;
+}
+.all-flights{
+    width: 90%;
+    padding: 30px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 100px 0px 0px 50px;
+}
+.all-flights>div:nth-of-type(1){
+    display: flex;
+    justify-content: space-between;
+}
+.all-flights>div:nth-of-type(1)>div>a{
+    margin: 0px 10px;
+    text-decoration: overline;
+    color: black;
+}
+.all-flights>div:nth-of-type(2){
+    margin-top: 60px;
+}
+.booked-flight{
+    padding: 10px 0px 0px 30px;
+}
+.available-flight{
+    padding: 0px 0px 5px 30px;
+
+}
+.available-flight>div:nth-of-type(2)>a>button{
+    background-color: rgb(1, 2, 54);
+    color: gold;
+    font-family: "Poppins", sans-serif;
+    height: 40px;
+    margin-top: 40px;
+    border-radius: 30px;
+    border: none;
+    width: 200px;
+}
+.pay{
+    padding: 50px 0px 5px 30px;
+    width: 70%;
+}
+.pay>h1{
+    font-weight: 500;
+    color: #252525;
+    margin: 20px 0px 10px 10px;
+}
+.pay>h3{
+    font-weight: 500;
+    color: #615656;
+    margin: 0px 0px 10px 10px;
+}
+.pay>div{
+    width: 100%;
+    background-color: white;
+    height: 300px;
+    margin: 50px 0px 0px 00px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.tour{
+    padding: 50px 0px 5px 30px;
+    width: 70%;
+}
+.tour>h3{
+    font-weight: 500;
+    color: #252525;
+}
+.tour>h1{
+    font-weight: 500;
+    color: #252525;
+    margin: 20px 0px 10px 10px;
+}
+.tour>div{
+    width: 100%;
+    background-color: white;
+    height: 300px;
+    margin: 50px 0px 0px 00px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.flight-bookings{
+    padding: 50px 0px 5px 0px;
+    width: 70%;
+}
+.flight-bookings>h1{
+    font-weight: 500;
+    color: #252525;
+    margin: 20px 0px 10px 30px;
+}
+.flight-bookings>div>h3{
+    font-weight: 500;
+    color: #252525;
+
+}
+.available-flight>div:nth-of-type(1){
+    width: 100%;
+    background-color: white;
+    height: 300px;
+    margin: 50px 0px 0px 00px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.log-out{
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+@media (max-width:1024px){
+
+    .side-bar{
+        width:30%;
+        padding:50px 20px;
+        border-radius:0 70px 0 0;
+    }
+
+    .whole-container>div:nth-of-type(2){
+        width:70%;
+    }
+
+    .cards{
+        gap:20px;
+        justify-content:center;
+    }
+
+    .cards>div:nth-of-type(1),
+    .cards>div:nth-of-type(2),
+    .cards>div:nth-of-type(3){
+        width:45%;
+        margin:0;
+    }
+
+    .all-flights{
+        width:90%;
+    }
+
+    .flight-bookings,
+    .pay,
+    .tour{
+        width:70%;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .whole-container{
+        flex-direction:column;
+    }
+
+    .side-bar{
+        width:100%;
+        height:auto;
+        position:relative;
+        border-radius:0;
+        padding:20px;
+    }
+
+    .side-bar>a>img{
+        height:70px;
+    }
+
+    .movements>div{
+        width:100%;
+    }
+
+    .profile{
+        margin-top:20px;
+        justify-content:flex-start;
+        gap:15px;
+    }
+
+    .detail{
+        margin:50px 0 0 0;
+    }
+
+    .dashboard,
+    .flight-bookings,
+    .pay,
+    .tour,
+    .whole-container>div:nth-of-type(2){
+        width:100%;
+    }
+
+    .heading-message{
+        margin:25px 20px;
+    }
+
+    .heading-message h3{
+        font-size:24px;
+    }
+    .heading-message{
+        flex-direction:column;
+        gap:20px;
+    }
+    .heading-message>div:nth-of-type(2){
+        width:100%;
+        margin-top:10px;
+        margin-left: 20px;
+    }
+    .heading-message>div:nth-of-type(2)>input{
+        width: 90%;
+        text-align: center;
+    }
+    .weather>button{
+        width: 50%;
+    }
+    .cards{
+        margin:20px;
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .cards>div:nth-of-type(1),
+    .cards>div:nth-of-type(2),
+    .cards>div:nth-of-type(3){
+        width:100%;
+        margin:0;
+    }
+
+    .all-flights{
+        width:calc(100% - 40px);
+        margin:30px 20px;
+        padding:20px;
+    }
+
+    .all-flights>div:first-child{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .flight-bookings,
+    .pay,
+    .tour{
+        padding:20px;
+    }
+
+    .available-flight>div{
+        overflow-x:auto;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .heading-message h3{
+        font-size:20px;
+    }
+
+    .cards>div{
+        height:130px;
+    }
+
+    .cards h4{
+        font-size:17px !important;
+    }
+
+    .all-flights{
+        height:auto;
+    }
+
+    .movements>div>h3{
+        font-size:15px;
+    }
+
+    .profile-name,
+    .profile-email{
+        font-size:14px;
+    }
+
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="./about.css" />
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="/homepage/index.html"
+            ><img
+              src="/homepage/images/imagelogo.png"
+              height="90px"
+              class="weblogo"
+              alt=""
+          /></a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="nav-menu">
+          <img
+            src="/homepage/images/imagelogo.png"
+            height="90px"
+            class="droplogo"
+            alt=""
+          />
+          <div class="links">
+            <a href="/About page/about.html" class="change">About Us</a>
+            <a href="/services page/services.html" class="change">Services</a>
+            <a href="/homepage/index.html" class="change">Blog</a>
+            <a href="/faq page/faq.html" class="change">FAQs</a>
+            <a href="/contact/contact.html" class="change">Contact Us</a>
+          </div>
+          <div class="signAndLog">
+            <button onclick="signUp()" class="signup">
+              <p class="insideBtn">Sign up</p>
+            </button>
+            <a href="/loginandSignup/login.html" class="change">Login</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <footer>
+      <div>
+        <div>
+          <img src="/homepage/images/white logo.png" alt="" height="120px" />
+          <p>
+            Ready to explore the world? Let's make your next getaway seamless
+            and start planning today.
+          </p>
+          <p>Follow Us</p>
+          <div class="social-icons">
+            <div title="Instagram">
+              <a
+                href="https://www.instagram.com/"
+                aria-label="Instagram"
+                target="_blank"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 
+                            0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 
+                            5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.8a1.2 
+                            1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 
+                                9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- TikTok -->
+            <div title="Tiktok">
+              <a
+                href="https://www.tiktok.com/"
+                aria-label="TikTok"
+                target="_blank"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19.5 8.5a5.5 5.5 0 0 1-3.5-1.2V16a5.5 5.5 0 1 1-4-5.3V13a2.5 2.5 0 1 0 1 2V3h3a5.5 5.5 0 0 0 3.5 5.5z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <a href="/About page/about.html">About Us</a>
+          <a href="#cont">Blog</a>
+          <a href="/faq page/faq.html">FAQ</a>
+          <a href="/contact/contact.html">Contact Us</a>
+        </div>
+        <div>
+          <h2>Extra Links</h2>
+          <a href="/About page/about.html" target="_blank"
+            >Terms and Condition</a
+          >
+          <a href="/About page/about.html">Privacy Policy</a>
+          <a href="/About page/about.html">Affliate</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <small>Copyright© Manhaj. All rights reserved.</small>
+      </div>
+    </footer>
+  </body>
+</html>

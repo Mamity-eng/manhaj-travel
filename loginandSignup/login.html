@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Manhaj travel and tours</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="shortcut icon" href="/homepage/images/favicon.png" type="image/x-icon">
+<style>
+    body{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.829), rgba(0, 0, 0, 0.842)),url(https://cdn.worldota.net/t/1024x768/content/2c/df/2cdf7bb5ed10b56978b251903ec8f8f21148f8eb.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Poppins", sans-serif;
+        height: 130vh;
+    }
+    section form div{
+        margin: 0px 0px 30px 0px;
+    }
+    input{
+        width: 90%;
+        height: 40px;
+        background-color: #fff;
+        border: 1px solid gold;
+        border-radius: 12px;
+        font-family: "Poppins", sans-serif;
+        animation: float 1s ease-in;
+    }
+    input:focus{
+        box-shadow: 0 0 10px rgba(0,119,225,.4);
+        outline: none;
+    }
+    section>img{
+        text-align: center;
+        margin: 20px 0px 0px 0%;
+    }
+    section{
+        width: 35%;
+        height: 400px;
+        padding: 20px;
+        text-align: center;
+        background-image: url(/homepage/images/backgroundimage.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        margin: 50px 0px 0px 33%;
+        font-family: "Poppins", sans-serif;
+    }
+    section>h2{
+        color: rgb(128, 92, 4);
+        text-align: center;
+        font-weight: 400;
+    }
+    section>h2>b{
+        color: rgb(9, 0, 15);
+    }
+    i{
+        color: white;
+        font-size: 15px;
+    }
+    button{
+        width: 70%;
+        border-radius: 5px;
+        margin: 25px 0px 0px 0%;
+        height: 40px;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        background-color: transparent;
+        border: none;
+        background-color: #a88412;
+    }
+    button:hover{
+        background-color: #a88412;
+        transition: 0.2s;
+        transform: translateY(-2px);
+    }
+    @media (max-width: 600px) {
+        section{
+            width: 90%;
+            margin: 0 10px 0px -2px;
+        }
+    }
+</style>
+<body>
+    
+
+    <a href="./signup.html" style="color: white;">← Back</a>
+    <section>
+        <img src="/homepage/images/imagelogo.png" alt="" height="70px">
+        <h2>Login</h2>
+        <form action="">
+            <input type="email" placeholder="Enter your Email" id="email">
+            <div></div>
+            <input type="password" placeholder="Enter your password" id="password">
+            <div></div>
+            <button type="submit"><i fa-solid fa-user></i>Login </button><br><b></b>
+        </form>
+    </section>
+</body>
+</html>
+<script>
+    let reveal = document.querySelector("b")
+    let myForm = document.querySelector("form")
+    let getItem = localStorage.getItem("currentUser")
+    let afterGettingItem = JSON.parse(getItem)
+    myForm.addEventListener("submit", (e)=>{
+        e.preventDefault();
+
+        
+
+        for (let index = 0; index < afterGettingItem.length; index++) {
+            let emailItem = afterGettingItem[index].email
+            let passwordItem = afterGettingItem[index].password
+            console.log(emailItem);
+            console.log(passwordItem);
+            
+            if (emailItem == myForm.email.value.trim() && passwordItem == myForm.password.value) {
+                window.location.href = "/Dashboard/dashboard.html"
+                alert("Welcome to your Dashboard")
+            } else {
+                reveal.innerText = "Your inputs are not matching"
+                reveal.setAttribute("style", "color: red")
+            }
+
+            
+        }
+    })
+</script>

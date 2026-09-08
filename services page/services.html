@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Manhaj travel and tours</title>
+</head>
+<link rel="shortcut icon" href="/homepage/images/favicon.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="./services.css">
+<body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="/index.html"
+            ><img
+              src="/homepage/images/imagelogo.png"
+              height="90px"
+              class="weblogo"
+              alt=""
+          /></a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <nav class="nav-menu">
+          <img
+            src="/homepage/images/imagelogo.png"
+            height="90px"
+            class="droplogo"
+            alt=""
+          />
+          <div class="links">
+            <a href="/About page/about.html" class="change">About Us</a>
+            <a href="" class="change">Services</a>
+            <a href="/index.html" class="change">Blog</a>
+            <a href="/faq page/faq.html" class="change">FAQs</a>
+            <a href="/contact/contact.html" class="change">Contact Us</a>
+          </div>
+          <div class="signAndLog">
+            <button onclick="signUp()" class="signup">
+              <p class="insideBtn">Sign up</p>
+            </button>
+            <a href="/loginandSignup/login.html" class="change">Login</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+  
+    <main class="hero">
+      <div class="hero-content">
+        <p>OUR SERVICES</p>
+        <h1>Travel Smarter. Explore Further.</h1>
+        <p>From flight bookings and visa assistance to Hajj, Umrah,
+            and unforgettable tour experiences, we're with you every
+        step of the way.</p>
+        <a href="#explore"><button>Explore Services →</button></a>
+      </div>
+      
+    </main>
+
+    <section>
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <div>
+            <h3>Flight Booking</h3>
+            <p>Book domestic and international flights at the best prices with trusted Airlines.</p>
+            
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <div>
+            <h3>Hotel Reservations</h3>
+            <p>Find and book the best hotels worlwide for a comfortable and relaxing stay.</p>
+            
+          </div>
+        </div>  
+        <div class="service-card" id="explore">
+          <div class="service-icon">
+            <i class="fa-solid fa-passport"></i>
+          </div>
+          <div>
+            <h3>Visa Assistance</h3>
+            <p>Get expert help with visa applications and documentation for stress-free-travel.</p>
+            
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-earth-africa"></i>
+          </div>
+          <div>
+            <h3>Tour Packages</h3>
+            <p>Discover amazing destinations with our customized and affordable tour packages.</p>
+            
+          </div>
+        </div>
+        <div class="service-card" id="explore">
+          <div class="service-icon">
+            <i class="fa-solid fa-mosque"></i>
+          </div>
+          <div>
+            <h3>Umrah and Hajj</h3>
+            <p>Complete Umrah and Hajj packages with guidance and full support.</p>
+            
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div>
+            <h3>Group Travel</h3>
+            <p>Perfect travel solutions for families, friends, schools and corporate groups.</p>
+            
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-car-side"></i>
+          </div>
+          <div>
+            <h3>Airport Transfer</h3>
+            <p>Enjoy safe, reliable, and comfortable airport pick-up and drop-off services.</p>
+            
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-shield-heart"></i>
+            
+          </div>
+          <div>
+            <h3>Travel Insurance</h3>
+            <p>Travel with peace of mind with our reliable and affordable travel insurance plans.</p>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer>
+      <div>
+        <div>
+          <img src="/homepage/images/white logo.png" alt="" height="120px" />
+          <p>
+            Ready to explore the world? Let's make your next getaway seamless
+            and start planning today.
+          </p>
+          <p>Follow Us</p>
+          <div class="social-icons">
+            <div title="Instagram">
+              <a
+                href="https://www.instagram.com/"
+                aria-label="Instagram"
+                target="_blank"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 
+                            0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 
+                            5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.8a1.2 
+                            1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 
+                                9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- TikTok -->
+            <div title="Tiktok">
+              <a
+                href="https://www.tiktok.com/"
+                aria-label="TikTok"
+                target="_blank"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19.5 8.5a5.5 5.5 0 0 1-3.5-1.2V16a5.5 5.5 0 1 1-4-5.3V13a2.5 2.5 0 1 0 1 2V3h3a5.5 5.5 0 0 0 3.5 5.5z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <a href="/About page/about.html">About Us</a>
+          <a href="#cont">Blog</a>
+          <a href="/faq page/faq.html">FAQ</a>
+          <a href="/contact/contact.html">Contact Us</a>
+        </div>
+        <div>
+          <h2>Extra Links</h2>
+          <a href="/About page/about.html" target="_blank"
+            >Terms and Condition</a
+          >
+          <a href="/About page/about.html">Privacy Policy</a>
+          <a href="/About page/about.html">Affliate</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <small>Copyright© Manhaj. All rights reserved.</small>
+      </div>
+    </footer>
+</body>
+</html>
+<script src="./services.js"></script>
