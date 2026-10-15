@@ -1,120 +1,288 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Customer DashBoard - Manhaj travel and tours</title>
-</head>
-    <link rel="shortcut icon" href="/homepage/images/favicon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <link
+    rel="shortcut icon"
+    href="/homepage/images/favicon.png"
+    type="image/x-icon"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
 
-<link rel="stylesheet" href="./dashboard.css">
-<body>
+  <link rel="stylesheet" href="./dashboard.css" />
+  <body>
     <div class="whole-container">
-        <div class="side-bar">
-            <a href="/index.html"><img src="/homepage/images/imagelogo.png" alt="" height="100px"></a>
-            <div class="movements">
-                <div onclick="dashb()">
-                    <h3 class="dash"> 🏠Dashboard</h3>
-                </div>
-                <div  onclick="flightbook()" class="fly">
-                    <h3>✈️ Flight Bookings</h3>
-                </div>
-                <div onclick="payments()">
-                    <h3>💸 Payments</h3>
-                </div>
-                <div onclick="tourdeal()">
-                    <h3>🚶‍➡️Tour Deals</h3>
-                </div>
-            </div>
-            <div class="profile">
-                <div class="image-profile"></div>
-                <div class="detail">
-                    <h3 class="profile-name"></h3>
-                    <small class="profile-email"></small>
-                </div>
-            </div>
-            <div class="log-out">
-                <h3 class="moveOut">log out➡️</h3>
-            </div>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="side-bar">
+        <a href="/index.html"
+          ><img src="/homepage/images/imagelogo.png" alt="" height="100px"
+        /></a>
+        <div class="movements">
+          <div onclick="dashb()">
+            <h3 class="dash">🏠Dashboard</h3>
+          </div>
+          <div onclick="flightbook()" class="fly">
+            <h3>✈️ Flight Bookings</h3>
+          </div>
+          <div onclick="payments()">
+            <h3>💸 Payments</h3>
+          </div>
+          <div onclick="tourdeal()">
+            <h3>🚶‍➡️Tour Deals</h3>
+          </div>
         </div>
-        <div class="dashboard">
-            <div class="heading-message">
-                <div>
-                    <h3>Hi, <b class="see-name"></b>. Welcome to your Dashboard 👏</h3>
-                    <p><small>This is what is going on in your Dashboard.</small></p>
-                </div>
-                <div class="weather">
-                    <input type="search" name="weather" id="weather" placeholder="Search for the weather of your country">
-                    <button id="weatherBtn">Search</button>
-                    <button id="clearWeather" onclick="clearWeather()">Clear</button>
-                    <output id="weather-output">
-                        <p id="country-name"></p>
-                        <p id="temperature"></p>
-                    </output>
-                </div>
-            </div>
-            <div class="cards">
-                <div>
-                    <h4>Total Flight Bookings</h4>
-                    <h4 class="total">0</h4>
-                </div>
-                <div>
-                    <h4>Total Payments</h4>
-                    <h4>₦<b class="money-payments">0</b>.00</h4>
-                </div>
-                <div>
-                    <h4>Pending Bookings</h4>
-                    <h4 class="pending">0</h4>
-                </div>
-            </div>
-            <div class="all-flights">
-                <div>
-                    <h3>Flight Bookings</h3>
-                    <div>
-                        <a href="/index.html">Book Flight</a>
-                    </div>
-                </div>
-                <div>
-                    <p class="realDate"></p>
-                    <p class="realTime"></p>
-                </div>
-            </div>
+        <div class="profile">
+          <div class="image-profile"></div>
+          <div class="detail">
+            <h3 class="profile-name"></h3>
+            <small class="profile-email"></small>
+          </div>
         </div>
+        <div class="log-out">
+          <h3 class="moveOut">log out➡️</h3>
+        </div>
+      </div>
+      <div class="dashboard">
+        <div class="heading-message">
+          <div>
+            <h3>Hi, <b class="see-name"></b>. Welcome to your Dashboard 👏</h3>
+            <p><small>This is what is going on in your Dashboard.</small></p>
+          </div>
+          <div class="weather">
+            <input
+              type="search"
+              name="weather"
+              id="weather"
+              placeholder="Search for the weather of your country"
+            />
+            <button id="weatherBtn">Search</button>
+            <button id="clearWeather" onclick="clearWeather()">Clear</button>
+            <output id="weather-output">
+              <p id="country-name"></p>
+              <p id="temperature"></p>
+            </output>
+          </div>
+        </div>
+        <div class="cards">
+          <div>
+            <h4>Total Flight Bookings</h4>
+            <h4 class="total">0</h4>
+          </div>
+          <div>
+            <h4>Total Payments</h4>
+            <h4>₦<b class="money-payments">0</b>.00</h4>
+          </div>
+          <div>
+            <h4>Pending Bookings</h4>
+            <h4 class="pending">0</h4>
+          </div>
+        </div>
+        <div class="all-flights">
+          <div>
+            <h3>Flight Bookings</h3>
+            <div>
+              <a href="/index.html">Book Flight</a>
+            </div>
+           
+          </div>
+          <div>
+            <p class="realDate"></p>
+            <p class="realTime"></p>
+          </div>
+        </div>
+      </div>
 
-        <div class="flight-bookings">
+      <div class="flight-bookings">
+        <div class="section-heading">
+          <div>
             <h1>Flight Bookings</h1>
-            <div class="booked-flight">
-                <h3>Booked Flights: </h3><h3 class="insideBookOrigin"></h3>
-            </div>
-            <div class="available-flight">
-                <div>
-                    <p>No item matches your search</p>
-                </div>
-                <div>
-                    <a href="/bookedflight/flight.html" class="seeFlight"><button onclick="printFlight()" >Print Flight Itinerary</button></a>
-                </div>
-            </div>
+            <p>Manage and view your flight reservations.</p>
+          </div>
         </div>
 
-        <div  class="pay">
+        <div class="booking-summary">
+          <div class="summary-card">
+            <i class="fa-solid fa-ticket"></i>
+            <div>
+              <p>Total Bookings</p>
+              <h2 class="total2">0</h2>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <p>Pending Bookings</p>
+              <h2 class="pending2">0</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <div class="content-card-heading">
+            <h3>My Reservations</h3>
+            <a href="/index.html">Book a Flight</a>
+          </div>
+
+          <div class="empty-state">
+            <i class="fa-solid fa-plane"></i>
+            <h3>No flight bookings yet</h3>
+            <p>
+              Your flight reservations will appear here once you book a flight.
+            </p>
+            <a href="/index.html" class="primary-btn">Explore Flights</a>
+          </div>
+
+          <div class="booked-content" id="booked-content">
+          
+            <div class="content-card-heading">
+              <h3>My Reservations</h3>
+              <span class="booking-status">Confirmed</span>
+            </div>
+
+            <div class="flight-ticket">
+              <div class="ticket-top">
+                <div>
+                  <i class="fa-solid fa-plane-departure"></i>
+                  <span>Manhaj Travels</span>
+                </div>
+                <small>Flight Reservation</small>
+              </div>
+
+              <div class="flight-route">
+                <div>
+                  <h2 class="booking-origin">LOS</h2>
+                  
+                </div>
+
+                <div class="route-line">
+                  <i class="fa-solid fa-plane"></i>
+                  <span></span>
+                </div>
+
+                <div>
+                  <h2 class="booking-destination">LHR</h2>
+                
+                </div>
+              </div>
+
+              <div class="ticket-details">
+                <div>
+                  <small>Booking Reference</small>
+                  <p class="booking-reference">MNJ-2026-00125</p>
+                </div>
+
+                <div>
+                  <small>Travel Date</small>
+                  <p class="booking-depart">Your booked date</p>
+                </div>
+
+                <div>
+                  <small>Payment Status</small>
+                  <p class="booking-payment">Pending</p>
+                </div>
+              </div>
+
+              <a href="/bookedflight/flight.html" class="primary-btn">
+                View Flight Itinerary
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="pay">
+        <div class="section-heading">
+          <div>
             <h1>Payments</h1>
-            <h3>You have not made any payment for any flight.</h3>
-            <div>
-                <h4>All Payments:</h4>
-            </div>
+            <p>Keep track of your flight booking payments.</p>
+          </div>
+          <i class="fa-solid fa-wallet"></i>
         </div>
-        <div class="tour">
+
+        <div class="payment-summary">
+          <div class="payment-card">
+            <i class="fa-solid fa-money-bill-wave"></i>
+            <p>Total Payments</p>
+            <h2>₦<b class="money-payments">0</b>.00</h2>
+          </div>
+
+          <div class="payment-card">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Payment Status</p>
+            <h2>Not paid</h2>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h3>Payment History</h3>
+
+          <div class="empty-state">
+            <i class="fa-solid fa-receipt"></i>
+            <h3>No payments recorded</h3>
+            <p>Your completed flight payments will appear here.</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="tour">
+        <div class="section-heading">
+          <div>
             <h1>Tour Deals</h1>
-            <h3>Tour Deals are currently not available.</h3>
-            <div>
-                <h4>Explore our tour deals:</h4>
-            </div>
+            <p>Discover destinations for your next adventure.</p>
+          </div>
+          <i class="fa-solid fa-earth-africa"></i>
         </div>
+
+        <div class="tour-grid">
+          <div class="tour-card">
+            <div class="tour-icon">
+              <i class="fa-solid fa-umbrella-beach"></i>
+            </div>
+            <h3>Beach Getaways</h3>
+            <p>Discover beautiful beaches and relaxing coastal destinations.</p>
+            <span class="deal-status">Coming Soon</span>
+          </div>
+
+          <div class="tour-card">
+            <div class="tour-icon">
+              <i class="fa-solid fa-city"></i>
+            </div>
+            <h3>City Adventures</h3>
+            <p>Explore exciting cities, famous landmarks, and local culture.</p>
+            <span class="deal-status">Coming Soon</span>
+          </div>
+
+          <div class="tour-card">
+            <div class="tour-icon">
+              <i class="fa-solid fa-mountain-sun"></i>
+            </div>
+            <h3>Nature Escapes</h3>
+            <p>Discover scenic landscapes and memorable outdoor experiences.</p>
+            <span class="deal-status">Coming Soon</span>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
 <script src="./dashboard.js"></script>

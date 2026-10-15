@@ -1,138 +1,493 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-  />
-  <link rel="stylesheet" href="./about.css" />
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Learn about Manhaj Travels and Tours, our mission, vision, and commitment to memorable travel experiences.">
+
+    <title>About Us | Manhaj Travels and Tours</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    
+
+  
+</head>
+<link rel="stylesheet" href="./about.css">
+<body>
+
+    <!-- HEADER -->
     <header>
-      <div class="header-container">
-        <div class="logo">
-          <a href="/homepage/index.html"
-            ><img
-              src="/homepage/images/imagelogo.png"
-              height="90px"
-              class="weblogo"
-              alt=""
-          /></a>
+        <div class="header-container">
+
+            <div class="logo">
+                <a href="/homepage/index.html">
+                    <img
+                        src="/homepage/images/imagelogo.png"
+                        height="90"
+                        class="weblogo"
+                        alt="Manhaj Travels and Tours logo"
+                    >
+                </a>
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav-menu">
+
+                <img
+                    src="/homepage/images/imagelogo.png"
+                    height="90"
+                    class="droplogo"
+                    alt="Manhaj Travels and Tours logo"
+                >
+
+                <div class="links">
+                    <a href="/About page/about.html" class="change active-link">About Us</a>
+                    <a href="/services page/services.html" class="change">Services</a>
+                    <a href="/homepage/index.html" class="change">Blog</a>
+                    <a href="/faq page/faq.html" class="change">FAQs</a>
+                    <a href="/contact/contact.html" class="change">Contact Us</a>
+                </div>
+
+                <div class="signAndLog">
+                    <button type="button" onclick="signUp()" class="signup">
+                        <span class="insideBtn">Sign up</span>
+                    </button>
+
+                    <a href="/loginandSignup/login.html" class="change">Login</a>
+                </div>
+
+            </nav>
         </div>
-
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-
-        <nav class="nav-menu">
-          <img
-            src="/homepage/images/imagelogo.png"
-            height="90px"
-            class="droplogo"
-            alt=""
-          />
-          <div class="links">
-            <a href="/About page/about.html" class="change">About Us</a>
-            <a href="/services page/services.html" class="change">Services</a>
-            <a href="/homepage/index.html" class="change">Blog</a>
-            <a href="/faq page/faq.html" class="change">FAQs</a>
-            <a href="/contact/contact.html" class="change">Contact Us</a>
-          </div>
-          <div class="signAndLog">
-            <button onclick="signUp()" class="signup">
-              <p class="insideBtn">Sign up</p>
-            </button>
-            <a href="/loginandSignup/login.html" class="change">Login</a>
-          </div>
-        </nav>
-      </div>
     </header>
 
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="about-hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content page-width">
+
+                <p class="eyebrow">
+                    <span></span>
+                    ABOUT US
+                </p>
+
+                <h1>
+                    Your Journey,<br>
+                    <span>Our Passion.</span>
+                </h1>
+
+                <p class="hero-description">
+                    At Manhaj Travels and Tours, we believe every journey
+                    is an opportunity to discover something new. We are
+                    passionate about helping people explore the world
+                    through convenient travel arrangements and memorable
+                    experiences.
+                </p>
+
+                <a href="/services page/services.html" class="btn btn-gold">
+                    Explore Our Services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- WHO WE ARE -->
+        <section class="who-section section-space">
+
+            <div class="who-grid page-width">
+
+                <div class="who-image-wrap">
+
+                    <img
+                        src="images/travel-team.png"
+                        alt="Travel consultant helping customers plan a trip"
+                        class="who-image"
+                    >
+
+                    <div class="image-note">
+                        <i class="fa-solid fa-plane"></i>
+
+                        <span>
+                            Explore the world<br>
+                            with confidence
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="who-copy">
+
+                    <p class="eyebrow dark-eyebrow">
+                        <span></span>
+                        WHO WE ARE
+                    </p>
+
+                    <h2>
+                        Making The World Feel
+                        <span>Closer.</span>
+                    </h2>
+
+                    <p>
+                        At Manhaj Travels and Tours, we believe every
+                        journey is an opportunity to discover something
+                        new. Travel is more than moving from one place
+                        to another; it is about experiences, connections,
+                        and memories.
+                    </p>
+
+                    <p>
+                        Our goal is to make travel planning easier by
+                        helping customers explore their options and
+                        organize their journeys with personalized
+                        assistance and care.
+                    </p>
+
+                    <p>
+                        Whether you are planning a holiday, a business
+                        trip, or a visit to loved ones, we want to help
+                        you take the next step with confidence.
+                    </p>
+
+                    <a href="/contact/contact.html" class="btn btn-outline">
+                        Contact Our Team
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- MISSION AND VISION -->
+        <section class="purpose-section section-space">
+
+            <div class="purpose-grid page-width">
+
+                <div class="purpose-intro">
+
+                    <p class="eyebrow dark-eyebrow">
+                        <span></span>
+                        OUR PURPOSE
+                    </p>
+
+                    <h2>
+                        What Guides
+                        <span>Our Journey</span>
+                    </h2>
+
+                    <p>
+                        Our commitment to thoughtful service guides
+                        everything we aim to do.
+                    </p>
+
+                </div>
+
+                <article class="purpose-card mission-card">
+
+                    <div class="purpose-icon">
+                        <i class="fa-regular fa-compass"></i>
+                    </div>
+
+                    <div>
+                        <h3>Our Mission</h3>
+
+                        <p>
+                            To provide convenient, reliable, and
+                            customer-focused travel assistance that
+                            makes planning journeys simpler and
+                            more enjoyable.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="purpose-card vision-card">
+
+                    <div class="purpose-icon">
+                        <i class="fa-solid fa-earth-africa"></i>
+                    </div>
+
+                    <div>
+                        <h3>Our Vision</h3>
+
+                        <p>
+                            To become a trusted travel and tour brand
+                            recognized for excellent customer care,
+                            dependable assistance, and memorable
+                            travel experiences.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- WHY CHOOSE US -->
+        <section class="why-section section-space">
+
+            <div class="why-grid page-width">
+
+                <div class="why-intro">
+
+                    <p class="eyebrow dark-eyebrow">
+                        <span></span>
+                        WHY CHOOSE US
+                    </p>
+
+                    <h2>
+                        More Than
+                        <span>Just a Trip.</span>
+                    </h2>
+
+                    <p>
+                        We aim to make planning your next trip more
+                        straightforward, personal, and enjoyable.
+                    </p>
+
+                </div>
+
+
+                <div class="benefits-grid">
+
+                    <article class="benefit">
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+                            <h3>Customer-Focused Service</h3>
+
+                            <p>
+                                We listen to your needs and help you
+                                explore suitable options.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="benefit">
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+
+                        <div>
+                            <h3>Personalized Assistance</h3>
+
+                            <p>
+                                We understand that every traveller
+                                and journey is different.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="benefit">
+
+                        <div class="benefit-icon">
+                            <i class="fa-regular fa-calendar-check"></i>
+                        </div>
+
+                        <div>
+                            <h3>Convenient Travel Planning</h3>
+
+                            <p>
+                                We help simplify the process of
+                                organizing your journey.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="benefit">
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <div>
+                            <h3>Memorable Experiences</h3>
+
+                            <p>
+                                We want every journey to become
+                                a positive memory.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="travel-image-wrap">
+
+                    <img
+                        src="images/travel-world.png"
+                        alt="Travel essentials including a map and passport"
+                        class="travel-image"
+                    >
+
+                    <div class="travel-image-caption">
+                        <i class="fa-solid fa-earth-americas"></i>
+                        Explore. Experience. Remember.
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FINAL CALL TO ACTION -->
+        <section class="final-cta">
+
+            <div class="cta-overlay"></div>
+
+            <div class="cta-content page-width">
+
+                <div>
+                    <p class="eyebrow">
+                        <span></span>
+                        YOUR NEXT ADVENTURE
+                    </p>
+
+                    <h2>
+                        The World Is Waiting
+                        <span>For You.</span>
+                    </h2>
+                </div>
+
+                <p>
+                    Wherever your journey takes you,
+                    let us help you take the first step.
+                </p>
+
+                <a href="/contact/contact.html" class="btn btn-gold">
+                    Start Planning
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
     <footer>
-      <div>
-        <div>
-          <img src="/homepage/images/white logo.png" alt="" height="120px" />
-          <p>
-            Ready to explore the world? Let's make your next getaway seamless
-            and start planning today.
-          </p>
-          <p>Follow Us</p>
-          <div class="social-icons">
-            <div title="Instagram">
-              <a
-                href="https://www.instagram.com/"
-                aria-label="Instagram"
-                target="_blank"
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+
+        <div class="footer-main">
+
+            <!-- FOOTER BRAND -->
+            <div class="footer-brand">
+
+                <img
+                    src="/homepage/images/white logo.png"
+                    alt="Manhaj Travels and Tours logo"
+                    height="120"
                 >
-                  <path
-                    d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 
-                            0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 
-                            5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.8a1.2 
-                            1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 
-                                9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
-                  />
-                </svg>
-              </a>
+
+                <p>
+                    Ready to explore the world? Let's make your next
+                    getaway seamless and start planning today.
+                </p>
+
+                <p class="follow-label">Follow Us</p>
+
+                <div class="social-icons">
+
+                    <div title="Instagram">
+                        <a
+                            href="https://www.instagram.com/"
+                            aria-label="Instagram"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+
+                    <div title="TikTok">
+                        <a
+                            href="https://www.tiktok.com/"
+                            aria-label="TikTok"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+
+                </div>
             </div>
 
-            <!-- TikTok -->
-            <div title="Tiktok">
-              <a
-                href="https://www.tiktok.com/"
-                aria-label="TikTok"
-                target="_blank"
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M19.5 8.5a5.5 5.5 0 0 1-3.5-1.2V16a5.5 5.5 0 1 1-4-5.3V13a2.5 2.5 0 1 0 1 2V3h3a5.5 5.5 0 0 0 3.5 5.5z"
-                  />
-                </svg>
-              </a>
+
+            <!-- COMPANY LINKS -->
+            <div class="footer-links">
+
+                <h2>Company</h2>
+
+                <a href="/About page/about.html">About Us</a>
+                <a href="/homepage/index.html">Blog</a>
+                <a href="/faq page/faq.html">FAQ</a>
+                <a href="/contact/contact.html">Contact Us</a>
+
             </div>
-          </div>
+
+
+            <!-- EXTRA LINKS -->
+            <div class="footer-links extra-links">
+
+                <h2>Extra Links</h2>
+
+                <a href="/About page/about.html">Terms and Conditions</a>
+                <a href="/About page/about.html">Privacy Policy</a>
+                <a href="/About page/about.html">Affiliate</a>
+
+            </div>
+
         </div>
-        <div>
-          <h2>Company</h2>
-          <a href="/About page/about.html">About Us</a>
-          <a href="#cont">Blog</a>
-          <a href="/faq page/faq.html">FAQ</a>
-          <a href="/contact/contact.html">Contact Us</a>
+
+
+        <div class="copyright">
+            <small>
+                Copyright&copy; Manhaj. All rights reserved.
+            </small>
         </div>
-        <div>
-          <h2>Extra Links</h2>
-          <a href="/About page/about.html" target="_blank"
-            >Terms and Condition</a
-          >
-          <a href="/About page/about.html">Privacy Policy</a>
-          <a href="/About page/about.html">Affliate</a>
-        </div>
-      </div>
-      <div class="copyright">
-        <small>Copyright© Manhaj. All rights reserved.</small>
-      </div>
+
     </footer>
-  </body>
+
+</body>
 </html>
+<script src="./about.js"></script>
