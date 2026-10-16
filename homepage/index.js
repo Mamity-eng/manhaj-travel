@@ -54,22 +54,68 @@ let formFlight = document.querySelector("#searchFlight");
 let currentUser = JSON.parse(localStorage.getItem("currentUser"))?.[0];
 if (!currentUser) {
     alert("Please log in first.");
+    window.location.href = "/loginandSignup/login.html";
 }
 let carrier = [];
-if (currentUser) {
-    let savedBookings = localStorage.getItem(`searchFlight_${currentUser.email}`);
 
-    if (savedBookings) {
-        carrier = JSON.parse(savedBookings);
+if (currentUser) {
+    let savedBookings = localStorage.getItem(
+        `searchFlight_${currentUser.email}`
+    );
+
+    try {
+        carrier = savedBookings ? JSON.parse(savedBookings) : [];
+
+        if (!Array.isArray(carrier)) {
+            carrier = [];
+        }
+    } catch (error) {
+        carrier = [];
+        console.error("Could not read saved bookings:", error);
     }
 }
+
+// Get today's date in YYYY-MM-DD format
+function getToday() {
+    let today = new Date();
+
+    let year = today.getFullYear();
+    let month = String(today.getMonth() + 1).padStart(2, "0");
+    let day = String(today.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+}
+
+let departureInput = formFlight.depart;
+let returnInput = formFlight.return;
+
+// Prevent selecting dates in the past
+departureInput.min = getToday();
+returnInput.min = getToday();
+
+// Update the minimum return date when departure changes
+departureInput.addEventListener("change", () => {
+    returnInput.min = departureInput.value || getToday();
+
+    // Clear return date if it is before the new departure date
+    if (
+        returnInput.value &&
+        returnInput.value < departureInput.value
+    ) {
+        returnInput.value = "";
+    }
+});
 formFlight.addEventListener("submit", (e) => {
 
     e.preventDefault();
-
-    let inputRegex = /^[a-zA-Z]{4,}$/;
-    let checkDate = new Date().getFullYear();
     let errorReveal = document.querySelector(".revealAllErrors");
+
+if (!errorReveal) {
+    console.error("Error message element was not found.");
+    return;
+}
+    let inputRegex = /^[a-zA-Z ]{2,}$/;
+    
 
     let flightDetails = {
         origin: formFlight.origin.value,
@@ -81,40 +127,65 @@ formFlight.addEventListener("submit", (e) => {
     let qualifiedOrigin = inputRegex.test(flightDetails.origin);
     let qualifiedDestiny = inputRegex.test(flightDetails.destiny);
 
-    let findDate = flightDetails.depart.indexOf("-");
-    let checkmateDate = flightDetails.depart.slice(0, findDate);
-
-    let findDateReturn = flightDetails.return.indexOf("-");
-    let checkDateOfReturn = flightDetails.return.slice(0, findDateReturn);
-
     if (!qualifiedOrigin) {
-        errorReveal.innerHTML = "Invalid Country for Origin";
+    errorReveal.style.display = "block";
+    errorReveal.innerHTML = "Invalid Country for Origin";
+    errorReveal.style.color = "red";
+    return;
+}
+
+if (!qualifiedDestiny) {
+    errorReveal.style.display = "block";
+    errorReveal.innerHTML = "Invalid Country for Destination";
+    errorReveal.style.color = "red";
+    return;
+}
+    // Check that both dates have been selected
+    if (!flightDetails.depart || !flightDetails.return) {
+        errorReveal.style.display = "block";
+        errorReveal.innerHTML =
+            "Please select both departure and return dates.";
         errorReveal.style.color = "red";
         return;
     }
 
-    if (!qualifiedDestiny) {
-        errorReveal.innerHTML = "Invalid Country for Destination";
+    // Check departure date
+    if (flightDetails.depart < getToday()) {
+        errorReveal.style.display = "block";
+        errorReveal.innerHTML =
+            "Departure date cannot be in the past.";
         errorReveal.style.color = "red";
         return;
     }
 
-    if (checkmateDate < checkDate) {
-        errorReveal.innerHTML = "Invalid Date for Departure";
+    // Check return date
+    if (flightDetails.return < getToday()) {
+        errorReveal.style.display = "block";
+        errorReveal.innerHTML =
+            "Return date cannot be in the past.";
         errorReveal.style.color = "red";
         return;
     }
 
-    if (checkDate > checkDateOfReturn) {
-        errorReveal.innerHTML = "Invalid Date for Return";
+    // Return date must not be before departure
+    if (flightDetails.return < flightDetails.depart) {
+        errorReveal.style.display = "block";
+        errorReveal.innerHTML =
+            "Return date cannot be before departure date.";
         errorReveal.style.color = "red";
         return;
     }
 
+    // All validations passed
     errorReveal.style.display = "none";
+
     carrier.push(flightDetails);
-    localStorage.setItem(`searchFlight_${currentUser.email}`,JSON.stringify(carrier)
+
+    localStorage.setItem(
+        `searchFlight_${currentUser.email}`,
+        JSON.stringify(carrier)
     );
 
     alert("You have successfully searched for a flight.");
+
 });

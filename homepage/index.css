@@ -589,7 +589,7 @@ footer>div:nth-of-type(1)>div:nth-of-type(3)>a:hover{
 .hamburger span{
     width: 25px;
     height: 2.5px;
-    background: #6B1FA0;
+    background: goldenrod;
     display: block;
     transition: 0.3s;
 }
@@ -632,7 +632,7 @@ footer>div:nth-of-type(1)>div:nth-of-type(3)>a:hover{
 
     .search form input,
     .search form button{
-        width: 18%;
+        width: 15%;
         margin: 10px 0;
     }
 
@@ -716,6 +716,7 @@ footer>div:nth-of-type(1)>div:nth-of-type(3)>a:hover{
     .hamburger{
         display: flex;
         margin-left: 60px;
+        /* border: 1px solid gold; */
     }
     .droplogo{
         display: block;
@@ -730,12 +731,23 @@ footer>div:nth-of-type(1)>div:nth-of-type(3)>a:hover{
         flex-direction: column;
         color: #000;
         padding: 20px 0;
-        height: auto;
+        height: 90vh;
         box-shadow: 0px 8px 20px rgba(97, 88, 4, 0.897);
         z-index: 999;
     }
     #menu-toggle:checked + .hamburger + .nav-menu{
         display: flex;
+    }
+    #menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
     }
     .links{
         gap: 12px;
@@ -750,7 +762,7 @@ footer>div:nth-of-type(1)>div:nth-of-type(3)>a:hover{
         position: static;
         width: 50%;
         height: 50px;
-        margin: 30px auto;
+        margin: 0px auto;
     }
     
 }
@@ -808,8 +820,12 @@ footer>div:nth-of-type(1)>div:nth-of-type(3)>a:hover{
 
     .image-interval img{
         width: 100%;
+        height: 100px;
     }
-
+    .offer-container img{
+        height: 600px;
+        width: 100%;
+    }
     .offer-container img,
     .booking img{
         width: 100%;
@@ -850,6 +866,7 @@ footer>div:nth-of-type(1)>div:nth-of-type(3)>a:hover{
 
     section:nth-of-type(8){
         width: 95%;
+        height: 300px;
         margin: 80px auto;
         padding: 30px 20px;
     }
@@ -879,4 +896,163 @@ footer>div:nth-of-type(1)>div:nth-of-type(3)>a:hover{
         width: 100%;
     }
     
+}
+
+/* Style the date input */
+input {
+    background-color: #0e021b;
+    color: white;
+    border: 1px solid #e4a909;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Style the calendar icon */
+input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(75%) sepia(90%) saturate(800%) hue-rotate(5deg);
+}
+
+
+/* =========================
+   FLIGHT SEARCH SECTION
+========================= */
+
+.search {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    z-index: 10;
+    width: calc(100% - 120px);
+    max-width: 1400px;
+    min-height: 200px;
+    height: auto;
+    margin: 20px auto 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #e4a909;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(14, 2, 27, 0.18);
+}
+
+/* Search heading */
+.search > p {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    color: #0e021b;
+    margin-bottom: 25px;
+}
+
+/* Form layout */
+.search > form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Input fields */
+.search > form > input {
+    flex: 1 1 180px;
+    min-width: 0;
+    width: auto;
+    height: 52px;
+    padding: 0 15px;
+    background-color: #fff;
+    color: #0e021b;
+    border: 1px solid #d8d2df;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Focus effect */
+.search > form > input:focus {
+    border-color: #e4a909;
+    box-shadow: 0 0 0 3px rgba(228, 169, 9, 0.15);
+}
+
+/* Search button */
+.search > form > button {
+    flex: 0 1 180px;
+    width: auto;
+    min-height: 52px;
+    margin: 0;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #0e021b;
+    color: #e4a909;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(14, 2, 27, 0.15);
+    transition: background 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.search > form > button:hover {
+    background: #e4a909;
+    color: #0e021b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(228, 169, 9, 0.3);
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 1024px) {
+    .search {
+        width: 92%;
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    .search > form > input {
+        flex-basis: 200px;
+    }
+
+    .search > form > button {
+        flex: 1 1 200px;
+    }
+}
+
+/* =========================
+   MOBILE PHONES
+========================= */
+
+@media (max-width: 550px) {
+    .search {
+        width: 92%;
+        margin: 25px auto;
+        padding: 20px 15px;
+        border-radius: 14px;
+    }
+
+    .search > p {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .search > form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .search > form > input,
+    .search > form > button {
+        flex: none;
+        width: 100%;
+        min-height: 50px;
+    }
 }

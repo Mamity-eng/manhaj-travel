@@ -19,7 +19,8 @@ html{
     padding: 90px 0px 0px 30px;
     width: 22%;
     height: 100vh;
-    position: sticky;
+    position: fixed;
+    flex-direction: column;
 }
 .side-bar>a>img{
     margin-bottom: 20px;
@@ -880,5 +881,69 @@ i{
         font-size: 18px;
     }
 }
+/* Keep the sidebar fixed */
+.side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22%;
+    height: 100vh;
+    overflow-y: hidden;
+    z-index: 1001;
+}
 
+/* Move dashboard sections beside the sidebar */
+.dashboard,
+.flight-bookings,
+.pay,
+.tour {
+    margin-left: 22%;
+    width: 78%;
+    box-sizing: border-box;
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+    .side-bar {
+        width: 30%;
+    }
+
+    .dashboard,
+    .flight-bookings,
+    .pay,
+    .tour {
+        margin-left: 30%;
+        width: 70%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .side-bar {
+        width: 50%;
+        max-width: 85%;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    #menu-toggle:checked ~ .side-bar {
+        transform: translateX(0);
+    }
+
+    .dashboard,
+    .flight-bookings,
+    .pay,
+    .tour {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .side-bar {
+        width: 90%;
+    }
+}
 

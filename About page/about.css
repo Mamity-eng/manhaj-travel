@@ -1004,7 +1004,10 @@ footer {
 ======================================== */
 
 @media screen and (max-width: 600px) {
-
+    .header-container nav{
+        width: 95%;
+        left: 10px;
+    }
     .page-width {
         width: 90%;
     }
@@ -1221,7 +1224,9 @@ footer {
     .header-container {
         padding: 0 4%;
     }
-
+    .header-container nav{
+        width: 95%;
+    }
     .weblogo {
         height: 65px;
     }
