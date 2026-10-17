@@ -54,7 +54,7 @@ let formFlight = document.querySelector("#searchFlight");
 let currentUser = JSON.parse(localStorage.getItem("currentUser"))?.[0];
 if (!currentUser) {
     alert("Please log in first.");
-    window.location.href = "/loginandSignup/login.html";
+    window.location.href = "/loginandSignup/signup.html";
 }
 let carrier = [];
 
